@@ -1,1 +1,195 @@
-<h1>欢迎来到临清奇幻乐高编程王国</h1>
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>临清奇幻乐高编程机器人教育</title>
+    <style>
+        :root{--accent:#0ea5a4;--bg:#f6f9fb;--card:#ffffff;--muted:#6b7280}
+        *{box-sizing:border-box}
+        body{font-family:Inter, "Microsoft YaHei", Arial, sans-serif;background:var(--bg);color:#0f172a;margin:0}
+        header{background:linear-gradient(90deg,rgba(14,165,164,0.05),transparent);padding:18px 24px;display:flex;align-items:center;justify-content:space-between}
+        .brand{display:flex;gap:12px;align-items:center}
+        .logo{width:48px;height:48px;border-radius:8px;background:var(--accent);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700}
+        nav a{margin-left:18px;color:#0f172a;text-decoration:none;font-weight:600}
+        .container{max-width:1100px;margin:28px auto;padding:0 18px}
+        .hero{display:flex;flex-wrap:wrap;align-items:center;gap:24px;padding:28px 18px}
+        .hero-left{flex:1;min-width:260px}
+        .hero h1{font-size:28px;margin:0 0 10px}
+        .hero p{margin:0 0 16px;color:var(--muted)}
+        .cta{display:inline-block;background:var(--accent);color:#fff;padding:10px 16px;border-radius:8px;text-decoration:none}
+        .hero-right{width:360px;min-width:260px}
+        .card{background:var(--card);padding:18px;border-radius:12px;box-shadow:0 6px 18px rgba(2,6,23,0.06)}
+        .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:18px}
+        .course-title{font-size:16px;font-weight:700;margin:0}
+        .meta{color:var(--muted);font-size:13px;margin-top:6px}
+        .price{color:var(--accent);font-weight:700;margin-top:8px}
+        .tag{display:inline-block;background:#eefdfc;color:var(--accent);padding:6px 8px;border-radius:999px;font-size:12px}
+        .section{margin-top:26px}
+        .section h2{margin:0 0 12px}
+        .syllabus .item{border-top:1px solid #eef2f7;padding:12px 0;cursor:pointer;display:flex;justify-content:space-between}
+        .syllabus .item strong{font-weight:700}
+        footer{margin-top:36px;padding:20px 18px;color:var(--muted);text-align:center}
+        @media(max-width:700px){.hero{flex-direction:column}.hero-right{width:100%}}
+    </style>
+</head>
+<body>
+    <header>
+        <div class="brand">
+            <div class="logo">乐高</div>
+            <div>
+                <div style="font-weight:800">临清奇幻</div>
+                <div style="font-size:12px;color:var(--muted)">乐高编程 · 机器人 · STEAM</div>
+            </div>
+        </div>
+        <nav>
+            <a href="#courses">课程</a>
+            <a href="#syllabus">体系</a>
+            <a href="#contact">联系我们</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="hero">
+            <div class="hero-left">
+                <h1>以项目驱动的乐高编程课程体系</h1>
+                <p>从入门到竞赛，分阶段构建编程与机器人能力。课程结合动手项目与逻辑训练，适合6-16岁学生。</p>
+                <a class="cta" href="#courses">查看全部课程</a>
+
+                <div class="section">
+                    <h2>课程定位</h2>
+                    <p style="color:var(--muted);margin:8px 0 0">年龄分层、能力评估后分班，注重代码思维、机械结构与团队协作。</p>
+                </div>
+            </div>
+
+            <div class="hero-right">
+                <div class="card">
+                    <div style="display:flex;justify-content:space-between;align-items:center">
+                        <div>
+                            <div class="tag">热门</div>
+                            <h3 style="margin:8px 0 0">入门模块 · 8次课</h3>
+                            <div class="meta">适合 6-9 岁 • 课程目标：拼搭与逻辑入门</div>
+                        </div>
+                        <div style="text-align:right">
+                            <div class="price">¥1200</div>
+                            <button onclick="enroll('入门模块')" style="margin-top:10px;padding:8px 12px;border-radius:8px;border:1px solid #e6eef0;background:#fff">报名</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid" style="margin-top:12px">
+                    <div class="card">
+                        <p class="course-title">进阶模块</p>
+                        <div class="meta">适合 9-12 岁 • 强化编程逻辑</div>
+                        <div class="price">¥1500</div>
+                    </div>
+                    <div class="card">
+                        <p class="course-title">项目实战</p>
+                        <div class="meta">基于主题完成机器人项目</div>
+                        <div class="price">¥1800</div>
+                    </div>
+                    <div class="card">
+                        <p class="course-title">竞赛训练</p>
+                        <div class="meta">挑战赛制训练与策略</div>
+                        <div class="price">¥2200</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="courses" class="section">
+            <h2>课程一览</h2>
+            <div class="grid">
+                <div class="card">
+                    <p class="course-title">入门课程（8次）</p>
+                    <div class="meta">拼搭基础、拖拽编程、逻辑训练</div>
+                </div>
+                <div class="card">
+                    <p class="course-title">进阶课程（12次）</p>
+                    <div class="meta">变量、流程、传感器实战</div>
+                </div>
+                <div class="card">
+                    <p class="course-title">项目课程（10次）</p>
+                    <div class="meta">主题项目 · 团队合作</div>
+                </div>
+                <div class="card">
+                    <p class="course-title">竞赛训练（长期）</p>
+                    <div class="meta">赛制训练 · 策略演练</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="syllabus" class="section syllabus">
+            <h2>课程体系（分阶段）</h2>
+            <div class="card" style="padding:6px 14px">
+                <div class="item" onclick="toggleDetail(this)">
+                    <div>
+                        <strong>阶段一 · 探索</strong>
+                        <div class="meta">目标：激发兴趣，掌握基础拼搭与图形化编程</div>
+                    </div>
+                    <div>▶</div>
+                </div>
+                <div class="item" onclick="toggleDetail(this)">
+                    <div>
+                        <strong>阶段二 · 建构</strong>
+                        <div class="meta">目标：结构理解、传感器入门、逻辑表达</div>
+                    </div>
+                    <div>▶</div>
+                </div>
+                <div class="item" onclick="toggleDetail(this)">
+                    <div>
+                        <strong>阶段三 · 应用</strong>
+                        <div class="meta">目标：完成独立项目、团队协作</div>
+                    </div>
+                    <div>▶</div>
+                </div>
+                <div class="item" onclick="toggleDetail(this)">
+                    <div>
+                        <strong>阶段四 · 竞赛</strong>
+                        <div class="meta">目标：赛制训练与策略优化</div>
+                    </div>
+                    <div>▶</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <h2>联系我们</h2>
+            <div class="card" style="display:flex;gap:12px;flex-wrap:wrap;align-items:center">
+                <div style="flex:1;min-width:200px">
+                    <p style="margin:0">电话：<strong>0535-xxxxxxx</strong></p>
+                    <p style="margin:6px 0 0">地址：临清市教育路示例校区</p>
+                </div>
+                <div>
+                    <button class="cta" onclick="enroll('咨询')">在线咨询 / 报名</button>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        © 临清奇幻乐高 · 保留所有权利
+    </footer>
+
+    <script>
+        function toggleDetail(el){
+            const next = el.nextElementSibling;
+            // 简单折叠效果：如果有详情节点则切换显示，否则临时显示提示
+            if(next && next.classList && next.classList.contains('detail')){
+                next.remove();
+                return;
+            }
+            const d = document.createElement('div');
+            d.className = 'detail';
+            d.style.padding = '12px 0 14px';
+            d.style.color = '#475569';
+            d.textContent = '详细大纲示例：课时安排、能力目标、作业与评估。可根据年龄分层与测评结果分班。';
+            el.parentNode.insertBefore(d, el.nextSibling);
+        }
+        function enroll(course){
+            alert('已请求报名：' + course + '\n我们的工作人员会尽快联系您。');
+        }
+    </script>
+</body>
+</html>
